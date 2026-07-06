@@ -1,4 +1,4 @@
-const apiKey = 'REDACTED';
+const apiKey = process.env.OPENROUTER_API_KEY || '';
 async function test() {
   try {
     const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {

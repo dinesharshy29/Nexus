@@ -34,8 +34,8 @@ export interface TutorResponse {
   source: 'ai' | 'fallback';
 }
 
-const OPENROUTER_API_KEY = 'REDACTED';
-const OPENROUTER_MODEL = 'google/gemini-2.5-flash:free';
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
+const OPENROUTER_MODEL = process.env.OPENROUTER_MODEL || 'google/gemini-2.5-flash:free';
 const GEMINI_MODELS = ['gemini-1.5-flash', 'gemini-1.5-flash-latest', 'gemini-2.0-flash'];
 const NVIDIA_MODEL = 'nvidia/nemotron-3-super-120b-a12b';
 
